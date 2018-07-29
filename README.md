@@ -8,6 +8,13 @@ Check out the Sphinx documentation at:
 
 https://storydrivendatasets.github.io/census-acs-intro
 
+Official Census guides:
+https://www.census.gov/library/video/2017/tutorial-excel-census-data.html
+
+Census shows how to do some wrangling, albeit in a manual, non-scalable way:
+
+https://youtu.be/PovytwvMxTA?t=7m38s
+
 
 # Draft guide
 
@@ -66,27 +73,30 @@ Not only are the age metrics listed for the United States as a whole, but for ev
 
 Of course, this is not an ideal way to view the data. Typically, once we've selected our geographies for FactFinder, we specify the tables we're interested in, and then download the data to our computers, rather than page through it with our web browsers.
 
-Go back to the **Advanced Search** page. Deselect the **AGE AND SEX** table as we won't be needing it. In the top-left **Selections** box, remove any search term -- i.e. "Age" -- that is in effect. 
 
-And then, search for the term, "**S0601**", which at the time of writing, returns 2 results: the table ["SELECTED CHARACTERISTICS OF THE TOTAL AND NATIVE POPULATIONS IN THE UNITED STATES"](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_16_5YR_S0601&prodType=table), for the 1-year and 5-year versions of the 2016 ACS dataset. Even though **Table S0601** exists in multiple years, it's restricted to 2016 because we selected the geography of the congressional districts for the 115th Congress, a geography that is only relevant to the 2016 timeframe.
+    # TKTKTTK need to change to DP05 (ignore until then)
 
-Check the box for the entry corresponding to the 2016 ACS5 dataset. Hit the **Download** button and FactFinder will cause your browser to download a ZIP file of the data:
+    Go back to the **Advanced Search** page. Deselect the **AGE AND SEX** table as we won't be needing it. In the top-left **Selections** box, remove any search term -- i.e. "Age" -- that is in effect. 
 
-<img src="_assets/images/factfinder-select-and-download-table.png" alt="factfinder-select-and-download-table.png">
+    And then, search for the term, "**S0601**", which at the time of writing, returns 2 results: the table ["SELECTED CHARACTERISTICS OF THE TOTAL AND NATIVE POPULATIONS IN THE UNITED STATES"](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_16_5YR_S0601&prodType=table), for the 1-year and 5-year versions of the 2016 ACS dataset. Even though **Table S0601** exists in multiple years, it's restricted to 2016 because we selected the geography of the congressional districts for the 115th Congress, a geography that is only relevant to the 2016 timeframe.
 
-<img src="_assets/images/factfinder-download.png" alt="factfinder-download.png">
+    Check the box for the entry corresponding to the 2016 ACS5 dataset. Hit the **Download** button and FactFinder will cause your browser to download a ZIP file of the data:
 
-If you're having trouble getting the data from FactFinder, you can find the exact file downloaded in the `data/zips` directory of this repo.
+    <img src="_assets/images/factfinder-select-and-download-table.png" alt="factfinder-select-and-download-table.png">
 
-The unzipped files are in `data/raw`.
+    <img src="_assets/images/factfinder-download.png" alt="factfinder-download.png">
 
-I've posted the two CSV files on Google Drive for easier viewing:
+    If you're having trouble getting the data from FactFinder, you can find the exact file downloaded in the `data/zips` directory of this repo.
 
-The metadata file (one row for each of the 427 data fields)
-https://docs.google.com/spreadsheets/d/1nEyWFD-h3NnAJX3-ef1Yl0zhvVDn5ntai1O0sdprZDM/edit#gid=100762371
+    The unzipped files are in `data/raw`.
 
-The actual data file, which has 3,600+ rows, one for each of the geographical locations we requested.
-https://docs.google.com/spreadsheets/d/1nEyWFD-h3NnAJX3-ef1Yl0zhvVDn5ntai1O0sdprZDM/edit#gid=1413001028
+    I've posted the two CSV files on Google Drive for easier viewing:
+
+    The metadata file (one row for each of the 427 data fields)
+    https://docs.google.com/spreadsheets/d/1nEyWFD-h3NnAJX3-ef1Yl0zhvVDn5ntai1O0sdprZDM/edit#gid=100762371
+
+    The actual data file, which has 3,600+ rows, one for each of the geographical locations we requested.
+    https://docs.google.com/spreadsheets/d/1nEyWFD-h3NnAJX3-ef1Yl0zhvVDn5ntai1O0sdprZDM/edit#gid=1413001028
 
 
 
